@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Pace</title>
+        <link href="./estilo.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Calculadora de Pace</h1>
+        <h2>Tempo & Distância -> Pace</h2>
+
+        <div class="Calc">
+
+            <div class="CalcVisor">
+                <div class="TimeInputCell">
+                    <h3>Pace Médio: </h3> 
+                </div>   
+                <div id="totPcM" class="TimeInputCell">Aguardando Cálculo</div>
+            </div>
+
+            <h3>Dados para o cálculo:</h3>
+            <div>
+                <div class="TimeInputCell">
+                    Km: <input 
+                    type="number" 
+                    id="inputKM" 
+                    placeholder="Km"
+                    required
+                ></div>
+                <div class="TimeInputCell">
+                    hh: <input 
+                    type="number" 
+                    id="inputH" 
+                    placeholder="hh"
+                ></div>
+                <div class="TimeInputCell">
+                    mm: <input 
+                    type="number" 
+                    id="inputM" 
+                    placeholder="mm"
+                    required
+                ></div>
+                <div class="TimeInputCell">
+                    ss: <input 
+                    type="number" 
+                    id="inputS" 
+                    placeholder="ss"
+                    required
+                ></div>
+            </div>
+            <div class="legenda"><strong>Legenda</strong>
+                <br>
+                <span><strong>Km:</strong> <em>Distância em Km (obrigatório)</em></span>
+                <br>
+                <span><strong>hh:</strong> <em>Horas (se houver)</em></span>
+                <br>
+                <span><strong>mm:</strong> <em>Minutos (obrigatório)</em></span>
+                <br>
+                <span><strong>ss:</strong> <em>Segundos (obrigatório)</em></span>
+            </div>
+            <button onclick="Calcular()">Calcular</button>
+            <br>
+        </div>
+
+        <script>
+            function Calcular() {
+                var totKM = parseFloat(document.getElementById("inputKM").value)
+                var totH = document.getElementById("inputH").value*60
+                var totM = document.getElementById("inputM").value*1
+                var totS = document.getElementById("inputS").value/60
+                var PaceM = ((totH + totM + totS))/(totKM)
+                var PaceMInt = Math.floor(PaceM)
+                var PaceMRes = Math.floor((PaceM - PaceMInt) * 60)
+
+                if (PaceMInt < 10) {
+                    PaceMInt = "0" + PaceMInt
+                }
+                if (PaceMRes < 10) {
+                    PaceMRes = "0" + PaceMRes
+                }
+
+                document.getElementById("totPcM").innerHTML = PaceMInt + ":" + PaceMRes + " min/km"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+
+body{
+    margin: 10px 20px;
+    background-color: #05193E;
+    color: white;
+    width: 320px;
+}
+
+div.Calc {
+    border: 1px dotted white;
+    padding: 10px;
+    background-color: #1665F9;
+    border-radius: 8px;
+}
+
+div.TimeInputCell {
+    display: inline;
+}
+
+div.CalcVisor {
+    padding: 6px;
+    background-color: #05193E;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+#inputKM, #inputH, #inputM, #inputM, #inputS {
+    width: 36px;
+    height: 12px;
+}
+
+#totPcM {
+    display: inline;
+}
+
+div.legenda {
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+h1, h2 {margin-bottom: 6px;}
+h1, h2, h3 {margin-top: 0px;}
+h3 {margin-bottom: 0px; display: inline;}
+h2 {
+    color: #1665F9;
+}
+
+button {
+    width: 100%;
+    border-radius: 6px;
+    border-width: 0px;
+    background-color: white;
+    color: #05193E;
+    padding: 8px;
+    font-weight: bold;
+}
