@@ -6,60 +6,62 @@
         <script src="paceCalc.js"></script>
     </head>
     <body>
-        <h1>Calculadora de Pace</h1>
-        <h2>Tempo & Distância -> Pace</h2>
+        <div id="bkgPaceApp">
+            <div id="mainPaceApp">
+                <h1>Calculadora de Pace</h1>
+                <h2>Tempo & Distância -> Pace</h2>
+                <div class="Calc">
+                    <div class="CalcVisor">
+                        <div class="TimeInputCell">
+                            <h3>Pace Médio: </h3> 
+                        </div>   
+                        <div id="totPcM" class="TimeInputCell">Aguardando Cálculo</div>
+                    </div>
 
-        <div class="Calc">
-
-            <div class="CalcVisor">
-                <div class="TimeInputCell">
-                    <h3>Pace Médio: </h3> 
-                </div>   
-                <div id="totPcM" class="TimeInputCell">Aguardando Cálculo</div>
+                    <h3>Dados para o cálculo:</h3>
+                    <div>
+                        <div class="TimeInputCell">
+                            Km: <input 
+                            type="number" 
+                            id="inputKM" 
+                            placeholder="Km"
+                            required
+                        ></div>
+                        <div class="TimeInputCell">
+                            hh: <input 
+                            type="number" 
+                            id="inputH" 
+                            placeholder="hh"
+                        ></div>
+                        <div class="TimeInputCell">
+                            mm: <input 
+                            type="number" 
+                            id="inputM" 
+                            placeholder="mm"
+                            required
+                        ></div>
+                        <div class="TimeInputCell">
+                            ss: <input 
+                            type="number" 
+                            id="inputS" 
+                            placeholder="ss"
+                            required
+                        ></div>
+                    </div>
+                    <div class="legenda"><strong>Legenda</strong>
+                        <br>
+                        <span><strong>Km:</strong> <em>Distância em Km (obrigatório)</em></span>
+                        <br>
+                        <span><strong>hh:</strong> <em>Horas (se houver)</em></span>
+                        <br>
+                        <span><strong>mm:</strong> <em>Minutos (obrigatório)</em></span>
+                        <br>
+                        <span><strong>ss:</strong> <em>Segundos (obrigatório)</em></span>
+                    </div>
+                    <button onclick="Calcular()">Calcular</button>
+                    <br>
+                </div>
             </div>
-
-            <h3>Dados para o cálculo:</h3>
-            <div>
-                <div class="TimeInputCell">
-                    Km: <input 
-                    type="number" 
-                    id="inputKM" 
-                    placeholder="Km"
-                    required
-                ></div>
-                <div class="TimeInputCell">
-                    hh: <input 
-                    type="number" 
-                    id="inputH" 
-                    placeholder="hh"
-                ></div>
-                <div class="TimeInputCell">
-                    mm: <input 
-                    type="number" 
-                    id="inputM" 
-                    placeholder="mm"
-                    required
-                ></div>
-                <div class="TimeInputCell">
-                    ss: <input 
-                    type="number" 
-                    id="inputS" 
-                    placeholder="ss"
-                    required
-                ></div>
-            </div>
-            <div class="legenda"><strong>Legenda</strong>
-                <br>
-                <span><strong>Km:</strong> <em>Distância em Km (obrigatório)</em></span>
-                <br>
-                <span><strong>hh:</strong> <em>Horas (se houver)</em></span>
-                <br>
-                <span><strong>mm:</strong> <em>Minutos (obrigatório)</em></span>
-                <br>
-                <span><strong>ss:</strong> <em>Segundos (obrigatório)</em></span>
-            </div>
-            <button onclick="Calcular()">Calcular</button>
-            <br>
         </div>
     </body>
 </html>
